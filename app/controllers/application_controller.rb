@@ -40,9 +40,10 @@ class ApplicationController < Sinatra::Base
   end 
   
   patch '/articles/:id' do 
+    # binding.pry 
     @article = Article.find(params[:id])
 
-    if @article.update(params[:article])
+    if @article.update(article_params)
       redirect "/articles/#{@article.id}"
     else
       puts "could not update"
@@ -52,7 +53,17 @@ class ApplicationController < Sinatra::Base
   
   delete '/articles/:id' do 
     @article = Article.find(params[:id]) 
+    
+    @article.destroy
   end 
+
+  private
+  
+  def article_params 
+    {title: params[:title], content: params[:content]}
+  end 
+  
+  
   
   
 end
