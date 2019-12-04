@@ -17,7 +17,7 @@ end
   article = Article.new(article_params)
   
   if article.save
-redirect '/articles'
+redirect "/articles/#{article.id}"
 else 
   puts " oooh noo"
   redirect '/'
@@ -48,7 +48,7 @@ patch '/articles/:id' do
   set_article
 #   @article = Article.find_by(id: params[:id])
  if @article.update(article_params)
-     redirect "/articles/#{@article.id}"
+     redirect "/articles/#{articles.id}"
    else 
      puts "could not update"
     redirect '/articles'
