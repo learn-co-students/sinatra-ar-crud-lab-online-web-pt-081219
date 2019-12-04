@@ -13,7 +13,7 @@ end
    erb :new
   end
   
-  post '/articles' do
+  post '/articles/:id' do
   article = Article.new(article_params)
   
   if article.save
