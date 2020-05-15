@@ -1,0 +1,4 @@
+<% @articles.each do |a| %>
+    <% href_url = "/articles/#{a.id}" %>
+    <h3><a href=<%= href_url %>><%= a.id %> | <%= a.title %> | <%= a.content %></a></h3>
+<% end %>
