@@ -1,0 +1,15 @@
+CRUD(CREATE, READ,UPDATE, DELETE) which are rows in a database
+- REST (get- requests to get all read actions, post- requests to get all create actions, patch- requests to do all update actions,delete delete actions)
+-views: index.erb(show all of resource) show.erb (shows one), new.erb (gives us our create form) edit.erb(gives us our update form)
+Each ROOTwill get... 
+| VERB  | URI           | ACTION              |
+|-------+---------------+---------------------|
+| GET   | /posts/new    | render new form     |#create
+| POST  | /posts        | create a new post   | #database action
+| GET   | /posts        | show index          |#read
+| GET   | /posts/id     | show one post       |#read
+| GET   | /posts/id/edit| render the edit form|
+| PATCH | /posts/id     | update a post       |#database update
+| DELETE| /posts/id     | delete a post       |
+
+get '/' is the root path
