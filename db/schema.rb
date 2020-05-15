@@ -17,4 +17,5 @@ ActiveRecord::Schema.define(version: 20151201201114) do
     t.string "content"
   end
 
+
 end
